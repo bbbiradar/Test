@@ -1,0 +1,11 @@
+apiVersion:   v1
+kind: Service
+metadata:
+      name: my-cluserterIP
+spec:
+   selector:
+       app:nginx
+   ports: 
+      - name: http
+        port:8090
+        targatePOrt:80
