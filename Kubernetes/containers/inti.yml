@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+    name: inti
+spec: 
+  initContainers: 
+   - name: init
+     image: busybox
+     command: ["init.yml", "/bin/sh"]
+     arg: ["sleep 10"]
+  containers:
+   - name: nginx
+     image: nginx:1.14.2
+     ports:
+      - containerPort: 80
