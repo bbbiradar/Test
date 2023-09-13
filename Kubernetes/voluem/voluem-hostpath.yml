@@ -9,10 +9,10 @@ spec:
     ports:
     - containerPort: 80
     volumeMounts:
-        - name: hostpath-vol
-      mountPath: /app/container-volumess
-  volumes: 
+    - name: hostpath-vol
+      mountPath: /app/container-volumes  # Corrected indentation here
+  volumes:
   - name: hostpath-vol
-    hostPath: 
-       path: /home/ubuntu/pod_data
-       type: DirectoryOrCreate
+    hostPath:
+      path: /home/ubuntu/pod_data
+      type: DirectoryOrCreate  # Corrected indentation here
